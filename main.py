@@ -3,6 +3,7 @@ from transformers import pipeline
 
 # Initialize model pipeline. Bart is specifically designed for summarization tasks.
 summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
+# BART (Biderectional and Auto-Regressive Transformers) is a sequence-to-sequence model developed by Facebook AI, specifically tuned for tasks like summarization and translation.
 
 # Decalare the text you wish to summarize. This should be a lengthy and informative piece to test the capability of the model.
 text = """
@@ -10,6 +11,8 @@ Artifical Intelligence (AI) is the simulation of human intelligence processes by
 """
 # Declare summarizer pipeline
 summary = summarizer(text, max_length=100, min_length=75, do_sample=False)
+# max_length and min_length parameters contril the length of the generated summary by setting upper and lower bounds.
+# do_sample parameter determines whether the model should generate text through sampling (randomized word selection) or greedy decoding (selecting the most probable word at each step)
 
 # Print the summary
 print("Summary:", summary[0]['summary_text'])
