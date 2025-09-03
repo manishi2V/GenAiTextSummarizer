@@ -1,0 +1,9 @@
+# Prerequisite: 
+!pip install transformers torch
+
+Enable GPU if using google colab from Menu > Runtime > Change Runtime Type > Hardware Accelerator
+
+Tools and LLMs used:
+Platform: Google Colab
+Hugging Face Transformers Library
+BART (facebook/bart-large-cnn)
